@@ -5,8 +5,7 @@
       <div class="row text-center">
         <div class="col-md-12">
             {% comment %} modify later {% endcomment %}
-          <h1 class="display-4">{{ listing.title }}</h1>
-          <p class="lead"><i class="fas fa-map-marker"></i> {{ listing.district }}</p>
+          <p class="lead"><i class="fas fa-map-marker"></i> {{ listing.get_district_display }}</p>
         </div>
       </div>
     </div>
@@ -18,13 +17,13 @@
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="index.html">Home</a>
+            <a href={% url "index" %}>Home</a>
           </li>
           <li class="breadcrumb-item">
-            <a href="listings.html">Listings</a>
+            <a href={% url "listings" %}>Listings</a>
           </li>
           {% comment %} modify later {% endcomment %}
-          <li class="breadcrumb-item active">{{ listing.title }}
+          <li class="breadcrumb-item active">{{ listing.title | title }}
         </ol>
       </nav>
     </div>
