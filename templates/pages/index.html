@@ -1,13 +1,14 @@
-{% extends 'base.html' %} {% load humanize %} {% block content %}
+{% extends 'base.html' %} {% load humanize %} 
+{% block title %} | Welcome {% endblock %}
+{% block content %}
 <section id="showcase">
+  {% include 'partials/_alert.html' %}
     <div class="container text-center">
       <div class="home-search p-5">
         <div class="overlay p-5">
           <h1 class="display-4 mb-4">Property Searching Just Got So Easy</h1>
           <p class="lead">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Recusandae quas, asperiores eveniet vel nostrum magnam voluptatum
-            tempore! Consectetur, id commodi!
+              This is just a description area
           </p>
           <div class="search">
               {% comment %} fix method later {% endcomment %}
